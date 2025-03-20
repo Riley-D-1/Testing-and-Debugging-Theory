@@ -40,8 +40,57 @@ print(divide_numbers(6, 0))
 print(divide_numbers("10", 5)) 
 ```
 
+Testing Debugging 
+1. Compare unit testing, integration testing and system testing.
+Unit testing,intergration testinf and system testing differ and test diffent parts of the program making all of them important in the debugging stage. Unit testing is where each unit is individually tested. Intergration testing involves combing some units together to test the program. System testing tests the entire system as a whole, ensuring everything works together as expected. The fact that each of the types test a diffrent part of the software leads to a more through testing and debugging process.
 
-Compare unit testing, integration testing and system testing.
 
-Compare
-Show how things are similar or different.
+Reconginising errors
+1. Syntax Error and Logical Error: The correct notation for multiplication is * instead of the x they used. It also is wrong becuase the correct maths equation is A = π r². Squared in python is simply **.
+``` python
+def calculate_area(radius):
+    area = 3.14 x radius x 2
+    return area
+
+print(calculate_area(5))
+print(calculate_area(3))
+```
+2. Logical Error: The correct equation for finding error of a rectangle/square is length*width not length+width
+``` python
+def calculate_area(length, width):
+    return length + width
+
+area = calculate_area(5, 3)
+print(f"Area: {area}")
+```
+
+3. Runtime error: Cannot divde by zero as it causes program to crash.
+```python
+def divide(a, b):
+    return a / b
+
+result = divide(10, 0)
+print(result)
+```
+4. Syntax Error: The for loop is missing a colon.
+```python
+for i in range(5)
+    print(i)
+```
+5. Logical Error: The average is found by dividing by the length of numbers not minus.
+```python
+def calculate_average(numbers):
+    total = sum(numbers)
+    return total - len(numbers)
+
+numbers = [10, 20, 30, 40]
+average = calculate_average(numbers)
+print(f"Average: {average}")
+```
+6. Syntax Error: Forgot to import the maths module containg the Pi function.
+```python
+def calculate_area(diameter):
+    return math.pi * diameter ** 2
+
+print(calculate_area(5))
+```

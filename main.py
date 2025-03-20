@@ -1,5 +1,4 @@
-# management_test.py
-from inventory_management import add_product, sell_product, check_availability, total_inventory_value
+from inventory_management import *
 
 # -------------------------------------------
 # Unit Testing
@@ -11,14 +10,15 @@ def unit_test():
     add_product('apple', 50)  # Adding 50 more apples
     add_product('banana', 20)  # Adding 20 more bananas
 
+    
     # Test selling products
     result = sell_product('apple', 10)
     assert result is None, f"Expected None but got {result}"  # No error should occur
-    assert check_availability('apple') == 60, "Apple stock should be 60 after selling 10."
+    assert check_availability('apple') == 40, "Apple stock should be 40 after selling 10."
 
-    # Test insufficient stock
-    result = sell_product('banana', 40)  # Trying to sell more than available
-    assert result == "Insufficient stock", "Expected 'Insufficient stock' error message."
+    # Test insufficient stock. Trying to sell more than available - if you sell more than 20, this SHOULD NOT present an error.
+    result = sell_product('banana', 200)  # Selling 200 should not raise an error - if it does, the sell_product function needs fixing.
+    assert result == "Insufficient stock", f"Expected 'Insufficient stock' but got {result}."
 
     # TODO: Test selling a non-existent product (e.g., 'grape') and check behavior.
     # For example, it should return "Insufficient stock" or similar.
@@ -74,13 +74,27 @@ def system_test():
     print(f"Total inventory value: {inventory_value} (Expected: 70)")  # (40 * 1.0) + (25 * 0.5)
     
     # TODO: Add tests for boundary conditions such as no stock or empty inventory.
+    sell_product('banana', 70)
+    add_product('banana', 30)
+    sell_product('apple', 40)
+    add_product('apple', 40)
+    sell_product('cherry', 20)
     # For example, check if the inventory value is 0 when no products exist.
+    apple_stock = check_availability('apple')
+    banana_stock = check_availability('banana')
+    cherry_stock = check_availability('cherry')
+    inventory_value = total_inventory_value()
 
+    print("\n----- System Test Results -----")
+    print(f"Apple stock: {apple_stock} (Expected: 0)")  # 40-40
+    print(f"Banana stock: {banana_stock} (Expected: 30)")  # 30 - 5
+    print(f"Cherry stock: {cherry_stock} (Expected: 30)") 
+    print(f"Total inventory value: {inventory_value} (Expected: 70)")  # (40 * 1.0) + (25 * 0.5)
 # -------------------------------------------
 # Running the Tests
 # -------------------------------------------
 if __name__ == "__main__":
-    # Run all tests
+    # Run all tests - UNCOMMENT EACH FUNCTION ONE AT A TIME!
     print("Running Unit Test...")
     unit_test()
 

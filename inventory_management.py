@@ -1,11 +1,5 @@
-# inventory_management.py
-
 # Dictionary to store product quantities
-inventory = {
-    'apple': 50,
-    'banana': 30,
-    'cherry': 20
-}
+inventory = {}
 
 # Function to add products to the inventory
 def add_product(product, quantity):
