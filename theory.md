@@ -94,3 +94,292 @@ def calculate_area(diameter):
 
 print(calculate_area(5))
 ```
+Python Debugger
+
+1. Breakpoint and Next (n)
+Run the above code. When the debugger starts running, type 'n' and press enter on each line until you are finished debugging.
+
+It's finishing the code and then running a library.  It prints the total after discount  and then wil continue return the diffrent python runcode libarary.
+
+
+
+```
+    > c:\users\riley.dowse\downloads\egg2.py(20)<module>()
+    -> main()
+    (Pdb) n
+    Total after discount: 450.0
+    --Return--
+    > c:\users\riley.dowse\downloads\egg2.py(20)<module>()->None
+    -> main()
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(585)runcode()
+    -> interruptible = False
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(608)runcode()
+    -> flush_stdout()
+    (Pdb) n
+    --Return--
+    > c:\program files\python312\lib\idlelib\run.py(608)runcode()->None
+    -> flush_stdout()
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(166)main()
+    -> rpc.response_queue.put((seq, ret))
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(149)main()
+    -> while True:
+
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(150)main()
+    -> try:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(151)main()
+    -> if exit_now:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(157)main()
+    -> try:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(158)main()
+    -> request = rpc.request_queue.get(block=True, timeout=0.05)
+    (Pdb) n
+    _queue.Empty
+    > c:\program files\python312\lib\idlelib\run.py(158)main()
+    -> request = rpc.request_queue.get(block=True, timeout=0.05)
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(159)main()
+    -> except queue.Empty:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(160)main()
+    -> request = None
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(163)main()
+    -> if request:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(168)main()
+    -> handle_tk_events()
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(149)main()
+    -> while True:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(150)main()
+    -> try:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(151)main()
+    -> if exit_now:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(157)main()
+    -> try:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(158)main()
+    -> request = rpc.request_queue.get(block=True, timeout=0.05)
+    (Pdb) n
+    _queue.Empty
+    > c:\program files\python312\lib\idlelib\run.py(158)main()
+    -> request = rpc.request_queue.get(block=True, timeout=0.05)
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(159)main()
+    -> except queue.Empty:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(160)main()
+    -> request = None
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(163)main()
+    -> if request:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(168)main()
+    -> handle_tk_events()
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(149)main()
+    -> while True:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(150)main()
+    -> try:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(151)main()
+    -> if exit_now:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(157)main()
+    -> try:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(158)main()
+    -> request = rpc.request_queue.get(block=True, timeout=0.05)
+    (Pdb) n
+    _queue.Empty
+    > c:\program files\python312\lib\idlelib\run.py(158)main()
+    -> request = rpc.request_queue.get(block=True, timeout=0.05)n
+    (Pdb) 
+    > c:\program files\python312\lib\idlelib\run.py(159)main()
+    -> except queue.Empty:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(160)main()
+    -> request = None
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(163)main()
+    -> if request:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(168)main()
+    -> handle_tk_events()
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(149)main()
+    -> while True:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(150)main()
+    -> try:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(151)main()
+    -> if exit_now:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(157)main()
+    -> try:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(158)main()
+    -> request = rpc.request_queue.get(block=True, timeout=0.05)
+    (Pdb) n
+    _queue.Empty
+    > c:\program files\python312\lib\idlelib\run.py(158)main()
+    -> request = rpc.request_queue.get(block=True, timeout=0.05)
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(159)main()
+    -> except queue.Empty:
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(160)main()
+    -> request = None
+    (Pdb) n
+    > c:\program files\python312\lib\idlelib\run.py(163)main()
+    -> if request:
+    (Pdb) 
+    > c:\program files\python312\lib\idlelib\run.py(168)main()
+    -> handle_tk_events()
+    (Pdb) n
+
+```
+
+
+Single Line Stepping (s)
+
+Run the above code. When the debugger starts running, type 's' and press enter on each line until you are finished debugging.
+
+Describe what happened.
+```
+Python 3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+================ RESTART: C:/Users/riley.dowse/Downloads/egg5.py ===============
+> c:\users\riley.dowse\downloads\egg5.py(20)<module>()
+-> main()
+(Pdb) s
+--Call--
+> c:\users\riley.dowse\downloads\egg5.py(10)main()
+-> def main():
+(Pdb) s
+> c:\users\riley.dowse\downloads\egg5.py(11)main()
+-> price = 100
+(Pdb) s
+> c:\users\riley.dowse\downloads\egg5.py(12)main()
+-> quantity = 5
+(Pdb) s
+> c:\users\riley.dowse\downloads\egg5.py(13)main()
+-> discount = 0.1  # 10% discount
+(Pdb) s
+> c:\users\riley.dowse\downloads\egg5.py(14)main()
+-> total = calculate_total(price, quantity)  # Line 10
+(Pdb) s
+--Call--
+> c:\users\riley.dowse\downloads\egg5.py(3)calculate_total()
+-> def calculate_total(price, quantity):
+(Pdb) s
+> c:\users\riley.dowse\downloads\egg5.py(4)calculate_total()
+-> total = price * quantity  # Line 3
+(Pdb) s
+> c:\users\riley.dowse\downloads\egg5.py(5)calculate_total()
+-> return total  # Line 4
+(Pdb) s
+--Return--
+> c:\users\riley.dowse\downloads\egg5.py(5)calculate_total()->500
+-> return total  # Line 4
+(Pdb) s
+> c:\users\riley.dowse\downloads\egg5.py(15)main()
+-> total_after_discount = apply_discount(total, discount)  # Line 11
+(Pdb) s
+--Call--
+> c:\users\riley.dowse\downloads\egg5.py(7)apply_discount()
+-> def apply_discount(total, discount):
+(Pdb) s
+> c:\users\riley.dowse\downloads\egg5.py(8)apply_discount()
+-> return total - (total * discount)  # Line 6
+(Pdb) s
+--Return--
+> c:\users\riley.dowse\downloads\egg5.py(8)apply_discount()->450.0
+-> return total - (total * discount)  # Line 6
+(Pdb) s
+> c:\users\riley.dowse\downloads\egg5.py(16)main()
+-> print(f"Total after discount: {total_after_discount}")  # Line 12
+(Pdb) s
+--Call--
+> c:\program files\python312\lib\idlelib\run.py(467)write()
+-> def write(self, s):
+(Pdb) s
+> c:\program files\python312\lib\idlelib\run.py(468)write()
+-> if self.closed:
+(Pdb) s
+> c:\program files\python312\lib\idlelib\run.py(470)write()
+-> s = str.encode(s, self.encoding, self.errors).decode(self.encoding, self.errors)
+(Pdb) s
+--Call--
+> c:\program files\python312\lib\idlelib\run.py(446)encoding()
+-> @property
+(Pdb) s
+> c:\program files\python312\lib\idlelib\run.py(448)encoding()
+-> return self._encoding
+(Pdb) s
+--Return--
+> c:\program files\python312\lib\idlelib\run.py(448)encoding()->'utf-8'
+-> return self._encoding
+(Pdb) s
+--Call--
+> c:\program files\python312\lib\idlelib\run.py(450)errors()
+-> @property
+(Pdb) s
+> c:\program files\python312\lib\idlelib\run.py(452)errors()
+-> return self._errors
+(Pdb) s
+--Return--
+> c:\program files\python312\lib\idlelib\run.py(452)errors()->'surrogatepass'
+-> return self._errors
+(Pdb) s
+--Call--
+> c:\program files\python312\lib\idlelib\run.py(446)encoding()
+-> @property
+(Pdb) s
+> c:\program files\python312\lib\idlelib\run.py(448)encoding()
+-> return self._encoding
+(Pdb) s
+--Return--
+> c:\program files\python312\lib\idlelib\run.py(448)encoding()->'utf-8'
+-> return self._encoding
+(Pdb) s
+--Call--
+> c:\program files\python312\lib\idlelib\run.py(450)errors()
+-> @property
+(Pdb) s
+> c:\program files\python312\lib\idlelib\run.py(452)errors()
+-> return self._errors
+(Pdb) s
+--Return--
+> c:\program files\python312\lib\idlelib\run.py(452)errors()->'surrogatepass'
+-> return self._errors
+(Pdb) s
+> c:\program files\python312\lib\idlelib\run.py(471)write()
+-> return self.shell.write(s, self.tags)
+(Pdb) s
+--Call--
+> c:\program files\python312\lib\idlelib\rpc.py(559)__getattr__()
+-> def __getattr__(self, name):
+(Pdb) s
+> c:\program files\python312\lib\idlelib\rpc.py(560)__getattr__()
+-> if self.__methods is None:
+(Pdb) s
+
+```
+
+
+VS CODE DEBUGGER
